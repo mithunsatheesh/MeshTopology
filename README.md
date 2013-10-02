@@ -1,8 +1,11 @@
+##Building a mesh topology
 
 Here we would discuss a sample implementation of a demo storm topology that tries to make a mesh, which would be different from the normal linear topology representations that we would see in storm starter samples.
 
 What we try to implement is a mesh structured topology which would look similar to the diagram below.
+
 ![mesh](http://mithunsatheesh.files.wordpress.com/2013/10/mesh.png)
+
 We may demo the same concept using a topology in which each message from the spout travels through its own path as specified in it self. When the message reaches each bolt it check its path contained and sends it to the next bolt defined in the path. The components of demo topology is explained below with the relevant code. The code shows the implementation of a mesh topology which has 5 sub bolts inter connected to each other.
 
 ####1. Mesh Topology
